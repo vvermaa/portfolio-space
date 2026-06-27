@@ -1,0 +1,105 @@
+.contact-page {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 100px;
+  background: radial-gradient(
+    circle at top,
+    #08204a 0%,
+    #020617 50%,
+    #000000 100%
+  );
+  color: white;
+  overflow: hidden;
+  position: relative;
+}
+
+.contact-content {
+  width: 45%;
+}
+
+.contact-subtitle {
+  color: rgba(255, 255, 255, 0.8);
+  letter-spacing: 5px;
+  font-size: 14px;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+
+.contact-title {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 110px;
+  font-weight: 700;
+  letter-spacing: 4px;
+  line-height: 1;
+  margin-bottom: 30px;
+}
+
+.contact-line {
+  width: 90px;
+  height: 4px;
+  background: #3fe8ff;
+  border-radius: 20px;
+  margin-bottom: 30px;
+}
+
+.contact-links {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.contact-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: 0.3s;
+  display: inline-block;
+}
+
+.contact-links a:hover {
+  color: #3fe8ff;
+  transform: translateX(8px);
+}
+
+.moon-container {
+  width: 50%;
+  height: 100%;
+  position: relative;
+}
+
+.stars {
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(2px 2px at 10% 20%, white, transparent),
+    radial-gradient(1px 1px at 15% 80%, white, transparent),
+    radial-gradient(2px 2px at 25% 40%, white, transparent),
+    radial-gradient(1px 1px at 35% 70%, white, transparent),
+    radial-gradient(2px 2px at 45% 10%, white, transparent),
+    radial-gradient(1px 1px at 55% 60%, white, transparent),
+    radial-gradient(2px 2px at 65% 30%, white, transparent),
+    radial-gradient(1px 1px at 75% 85%, white, transparent),
+    radial-gradient(2px 2px at 85% 50%, white, transparent),
+    radial-gradient(1px 1px at 95% 15%, white, transparent),
+    radial-gradient(2px 2px at 30% 15%, white, transparent),
+    radial-gradient(1px 1px at 60% 75%, white, transparent),
+    radial-gradient(2px 2px at 80% 25%, white, transparent);
+  opacity: 0.8;
+  animation:
+    drift 120s linear infinite,
+    twinkle 4s ease-in-out infinite;
+}
+@keyframes twinkle {
+  0% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 0.9;
+  }
+  100% {
+    opacity: 0.4;
+  }
+}
