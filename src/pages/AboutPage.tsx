@@ -201,7 +201,14 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
-
+     <button
+  className="scroll-top-btn"
+  onClick={() => {
+    document.getElementById("root")?.scrollTo({ top: 0, behavior: "smooth" });
+  }}
+>
+  ↑
+</button>
     </div>
   );
 }

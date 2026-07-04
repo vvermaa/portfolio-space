@@ -9,7 +9,7 @@
   );
   color: white;
   position: relative;
-  overflow: visible;
+  overflow: hidden;
 }
 
 .orbit-container {
