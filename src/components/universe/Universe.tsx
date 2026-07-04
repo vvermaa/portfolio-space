@@ -11,6 +11,7 @@ export default function Universe() {
   const navigate = useNavigate();
 
   return (
+    <div style={{ width: "100vw", height: "100vh", overflow: "hidden", position: "relative" }}>
     <div className="universe">
       <div className="stars"></div>
       <Navbar />
@@ -31,6 +32,7 @@ export default function Universe() {
       <div className="planet-carousel">
         <OrbitCarousel current={current} setCurrent={setCurrent} />
       </div>
+    </div>
     </div>
   );
 }

@@ -5,10 +5,11 @@ export default function Navbar() {
     <nav className="navbar">
       <div className="logo">VV</div>
       <div className="nav-links">
+        <Link to="/home">Home</Link>
+        <Link to="/about">About</Link>
         <Link to="/projects">Projects</Link>
-        <Link to="/">About</Link>
-        <Link to="/">Resume</Link>
         <Link to="/contact">Contact</Link>
+        <Link to="/resume">Resume</Link>
       </div>
     </nav>
   );

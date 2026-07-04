@@ -2,9 +2,7 @@
   width: 100vw;
   height: 100vh;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 100px;
+  flex-direction: column;
   background: radial-gradient(
     circle at top,
     #08204a 0%,
@@ -16,8 +14,18 @@
   position: relative;
 }
 
+.contact-body {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 100px;
+  height: calc(100vh - 80px);
+  width: 100%;
+}
+
 .contact-content {
   width: 45%;
+  z-index: 2;
 }
 
 .contact-subtitle {
@@ -73,6 +81,8 @@
 .stars {
   position: absolute;
   inset: 0;
+  z-index: 0;
+  pointer-events: none;
   background-image:
     radial-gradient(2px 2px at 10% 20%, white, transparent),
     radial-gradient(1px 1px at 15% 80%, white, transparent),
@@ -92,14 +102,14 @@
     drift 120s linear infinite,
     twinkle 4s ease-in-out infinite;
 }
+
 @keyframes twinkle {
-  0% {
-    opacity: 0.4;
-  }
-  50% {
-    opacity: 0.9;
-  }
-  100% {
-    opacity: 0.4;
-  }
+  0%   { opacity: 0.4; }
+  50%  { opacity: 0.9; }
+  100% { opacity: 0.4; }
+}
+
+@keyframes drift {
+  from { transform: translateY(0); }
+  to   { transform: translateY(-80px); }
 }
